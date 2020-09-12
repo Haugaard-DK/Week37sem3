@@ -22,4 +22,5 @@
     
 ## FRIDAY
   * Fetch api <br/>
+    Ikke lavet.
   
