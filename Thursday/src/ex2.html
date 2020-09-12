@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Exercise 2 Thursday</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .mydiv {width: 25px; height: 25px;background-color:yellow; margin:1px;}
+        </style>
+    </head>
+    <body>
+        <div id="outer">
+            <div id = "div1" class ="mydiv">div1</div>
+            <div id = "div2" class ="mydiv">div2</div>
+            <div id = "div3" class ="mydiv">div3</div>
+            <div id = "div4" class ="mydiv">div4</div>
+            <div id = "div5" class ="mydiv">div5</div>
+            <div id = "div6" class ="mydiv">div6</div>
+            <div id = "div7" class ="mydiv">div7</div>
+            <div id = "div8" class ="mydiv">div8</div>
+            <div id = "div9" class ="mydiv">div9</div>
+            <div id = "div10" class ="mydiv">div10</div>
+            <div id = "div11" class ="mydiv">div11</div>
+            <div id = "div12" class ="mydiv">div12</div>
+            <p id="paragraph"></p>
+        </div>
+        
+
+        <script>
+            document.getElementById("outer").addEventListener("click", function(e){
+                paragraph.innerText = e.target.id;
+            });
+        </script>
+    </body>
+</html>
