@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Exercise 1 Thursday</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id = "div1">div1</div>
+        <div id = "div2">div2</div>
+        <div id = "div3">div3</div>
+
+        <button id ="myBtn">Skift farve</button>
+
+        <script>
+            div1.style.backgroundColor = getRandomColor();
+            div2.style.backgroundColor = getRandomColor();
+            div3.style.backgroundColor = getRandomColor();
+
+            document.getElementById("myBtn").addEventListener("click", function () {
+                div1.style.backgroundColor = getRandomColor();
+                div2.style.backgroundColor = getRandomColor();
+                div3.style.backgroundColor = getRandomColor();
+            });
+
+            function getRandomColor() {
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+        </script>
+    </body>
+</html>

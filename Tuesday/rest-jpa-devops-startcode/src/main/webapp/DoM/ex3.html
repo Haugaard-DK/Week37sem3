@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Exercise 3 Thursday</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="list"></div>
+
+        <form id="form">
+            <input type="text" id="name">
+            <input type="submit" value="Add name">
+            <input type="button" id="rmFirst" value="Remove first">
+            <input type="button" id="rmLast" value="Remove last">
+        </form>
+
+        <script>
+            var names = ["Lars", "Thomas", "Mathias", "Bob", "Ib", "Arne"];
+            var htmlString = function (array) {
+                var result = ["<ul>", "</ul>"];
+                var li = array.map(n => "<li>" + n + "</li>");
+
+                result.splice(1, 0, li.join(""));
+
+                return result.join("");
+            }
+
+            document.getElementById("list").innerHTML = htmlString(names);
+            
+            document.getElementById("form").addEventListener("submit", function(e){
+                e.preventDefault();
+                
+                names.push(document.getElementById("name").value);
+                document.getElementById("name").value = "";
+                document.getElementById("list").innerHTML = htmlString(names);
+            });
+            document.getElementById("rmFirst").addEventListener("click", function(){
+                names.shift();
+                document.getElementById("list").innerHTML = htmlString(names);
+            });
+            document.getElementById("rmLast").addEventListener("click", function(){
+                names.pop();
+                document.getElementById("list").innerHTML = htmlString(names);
+            });
+
+        </script>
+    </body>
+</html>
